@@ -47,8 +47,11 @@ DIet_planner/
 │── forms.py            # User profile form handling
 │── models.py           # User data model
 │── utils.py            # BMR calculation & recommendations
-│── templates/          # HTML files for frontend
-│── static/             # CSS and other static files
+│── templates/
+         │── index.html
+         │── recommendation.html         # HTML files for frontend
+│── static/
+         │── style.css            # CSS and other static files
 │── requirements.txt    # List of dependencies
 │── README.md           # Project documentation
 ```
