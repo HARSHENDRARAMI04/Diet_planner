@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Diet Recommendations</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Diet Recommendations for {{ user.name }}</h1>
+        <p>BMR: {{ bmr }} kcal/day</p>
+        <p>Daily Caloric Needs: {{ daily_calories }} kcal/day</p>
+        <h2>Recommended Meals</h2>
+        <ul>
+            {% for recommendation in recommendations %}
+                <li>{{ recommendation }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('index') }}">Back</a>
+    </div>
+</body>
+</html>

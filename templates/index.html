@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Diet Nutrition and Planning</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Diet Nutrition and Planning System</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.name.label }} {{ form.name() }}
+            </div>
+            <div>
+                {{ form.age.label }} {{ form.age() }}
+            </div>
+            <div>
+                {{ form.gender.label }} {{ form.gender() }}
+            </div>
+            <div>
+                {{ form.weight.label }} {{ form.weight() }}
+            </div>
+            <div>
+                {{ form.height.label }} {{ form.height() }}
+            </div>
+            <div>
+                {{ form.activity_level.label }} {{ form.activity_level() }}
+            </div>
+            <div>
+                {{ form.health_goal.label }} {{ form.health_goal() }}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
